@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"invisible":true,"preemptive":"capable"}
   // Copyright 2020 Open Road Development Inc. All rights reserved.
 
   // This program is free software: you can redistribute it and/or modify

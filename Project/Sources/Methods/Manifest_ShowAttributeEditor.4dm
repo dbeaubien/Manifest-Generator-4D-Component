@@ -1,4 +1,4 @@
-//%attributes = {"invisible":true,"shared":true}
+//%attributes = {"shared":true}
 /* Manifest_ShowAttributeEditor ()
    Displays the manifest editor and lets the user modify
    the details for the current structure.
