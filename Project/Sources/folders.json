@@ -1,0 +1,44 @@
+﻿{
+	"_Shared": {
+		"methods": [
+			"Manifest_RefreshLocalFile",
+			"Manifest_ShowAttributeEditor"
+		]
+	},
+	"File Methods": {
+		"methods": [
+			"File_LoadFromCurrentResource",
+			"File_SaveToCurrentResource"
+		]
+	},
+	"OnErr Methods": {
+		"methods": [
+			"OnErr_ClearError",
+			"OnErr_Generic",
+			"OnErr_LastError"
+		]
+	},
+	"Private": {
+		"groups": [
+			"File Methods",
+			"OnErr Methods",
+			"Utility Methods"
+		],
+		"methods": [
+			"Manifest__NewObject",
+			"Refresh_MethodList",
+			"Refresh_TransientAttributes"
+		],
+		"forms": [
+			"Manifest_ShowAttributeEditor"
+		]
+	},
+	"Utility Methods": {
+		"methods": [
+			"Compiler_Methods",
+			"Compiler_Variables",
+			"Utility_Get4DLongVersion"
+		]
+	},
+	"trash": {}
+}
