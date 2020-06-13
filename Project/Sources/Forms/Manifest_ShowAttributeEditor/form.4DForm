@@ -10,6 +10,7 @@
 	"windowMaxWidth": 32767,
 	"windowMaxHeight": 32767,
 	"events": [
+		"onLoad",
 		"onCloseBox"
 	],
 	"windowTitle": "window title",
@@ -20,6 +21,15 @@
 		},
 		{
 			"objects": {
+				"Group Box": {
+					"type": "groupBox",
+					"text": "Shared Methods",
+					"top": 10,
+					"left": 393,
+					"width": 243,
+					"height": 375,
+					"fontWeight": "bold"
+				},
 				"Text": {
 					"type": "text",
 					"text": "Author",
@@ -33,14 +43,14 @@
 					"type": "input",
 					"left": 20,
 					"top": 44,
-					"width": 362,
-					"height": 17,
+					"width": 352,
+					"height": 33,
 					"dataSource": "Form:C1466.manifest.author"
 				},
 				"Text1": {
 					"type": "text",
 					"text": "Copyrights",
-					"top": 75,
+					"top": 92,
 					"left": 20,
 					"width": 150,
 					"height": 16,
@@ -49,15 +59,15 @@
 				"Input1": {
 					"type": "input",
 					"left": 20,
-					"top": 96,
-					"width": 362,
-					"height": 17,
+					"top": 113,
+					"width": 352,
+					"height": 33,
 					"dataSource": "Form:C1466.manifest.copyrights"
 				},
 				"Text2": {
 					"type": "text",
 					"text": "Component Version",
-					"top": 127,
+					"top": 161,
 					"left": 20,
 					"width": 150,
 					"height": 16,
@@ -66,35 +76,25 @@
 				"Input2": {
 					"type": "input",
 					"left": 20,
-					"top": 148,
-					"width": 362,
+					"top": 182,
+					"width": 352,
 					"height": 17,
 					"dataSource": "Form:C1466.manifest.version"
 				},
 				"Text3": {
 					"type": "text",
 					"text": "Build Date",
-					"top": 179,
+					"top": 213,
 					"left": 20,
 					"width": 150,
 					"height": 16,
 					"fontWeight": "bold"
 				},
-				"Input3": {
-					"type": "input",
-					"left": 20,
-					"top": 200,
-					"width": 362,
-					"height": 17,
-					"dataSource": "Form:C1466.manifest.buildDate",
-					"dataSourceTypeHint": "date",
-					"entryFilter": ""
-				},
-				"Button": {
+				"ButtonSave": {
 					"type": "button",
 					"text": "Save",
-					"top": 296,
-					"left": 296,
+					"top": 356,
+					"left": 286,
 					"width": 86,
 					"height": 29,
 					"events": [
@@ -102,23 +102,23 @@
 					],
 					"action": "accept"
 				},
-				"Button1": {
+				"ButtonCancel": {
 					"type": "button",
 					"text": "Cancel",
-					"top": 296,
-					"left": 196,
+					"top": 356,
+					"left": 186,
 					"width": 86,
 					"height": 29,
 					"events": [
 						"onClick"
 					],
 					"action": "cancel",
-					"method": "ObjectMethods/Button1.4dm"
+					"method": "ObjectMethods/ButtonCancel.4dm"
 				},
 				"Text4": {
 					"type": "text",
 					"text": "URL",
-					"top": 229,
+					"top": 263,
 					"left": 20,
 					"width": 150,
 					"height": 16,
@@ -127,16 +127,52 @@
 				"Input4": {
 					"type": "input",
 					"left": 20,
-					"top": 250,
-					"width": 362,
-					"height": 17,
+					"top": 284,
+					"width": 352,
+					"height": 33,
 					"dataSource": "Form:C1466.manifest.url"
+				},
+				"Input5": {
+					"type": "input",
+					"left": 400,
+					"top": 27,
+					"width": 222,
+					"height": 350,
+					"dataSource": "Form:C1466.manifest.methodList.join(\"\\r\")",
+					"enterable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"scrollbarVertical": "automatic"
+				},
+				"Input6": {
+					"type": "input",
+					"left": 20,
+					"top": 234,
+					"width": 160,
+					"height": 17,
+					"dataSource": "Form:C1466.manifest.buildDate",
+					"dataSourceTypeHint": "date",
+					"entryFilter": "",
+					"dateFormat": "short"
+				},
+				"ButtonToday": {
+					"type": "button",
+					"text": "Today",
+					"top": 231,
+					"left": 188,
+					"width": 76,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"action": "",
+					"method": "ObjectMethods/ButtonToday.4dm"
 				}
 			}
 		}
 	],
 	"method": "method.4dm",
-	"width": 400,
-	"height": 340,
+	"width": 650,
+	"height": 400,
 	"menuBar": "Basic Menu Bar"
 }
