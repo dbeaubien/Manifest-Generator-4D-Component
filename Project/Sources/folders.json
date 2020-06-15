@@ -1,14 +1,23 @@
 ﻿{
 	"_Shared": {
 		"methods": [
+			"Manifest_GetComponentManifests",
+			"Manifest_GetPluginManifests",
 			"Manifest_RefreshLocalFile",
+			"Manifest_SetAuthor",
+			"Manifest_SetBuildDate",
+			"Manifest_SetCopyright",
+			"Manifest_SetURL",
+			"Manifest_SetVersion",
 			"Manifest_ShowAttributeEditor"
 		]
 	},
 	"File Methods": {
 		"methods": [
 			"File_LoadFromCurrentResource",
-			"File_SaveToCurrentResource"
+			"File_SaveToCurrentResource",
+			"Folder_GetHostComponentFolder",
+			"Folder_GetHostPluginsFolder"
 		]
 	},
 	"OnErr Methods": {
