@@ -11,7 +11,7 @@ C_OBJECT:C1216($1;$manifestObj)
 $manifestObj:=$1
 
 C_TEXT:C284($manifestFilePath)
-$manifestFilePath:=Get 4D folder:C485(Current resources folder:K5:16)+"componentManifest.json"
+$manifestFilePath:=Get 4D folder:C485(Current resources folder:K5:16;*)+"componentManifest.json"
 
 TEXT TO DOCUMENT:C1237($manifestFilePath;JSON Stringify:C1217($manifestObj;*);"utf-8";Document unchanged:K24:18)
 
