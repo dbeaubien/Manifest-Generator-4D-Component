@@ -12,3 +12,5 @@ data/*
 
 # No logs
 logs/*
+
+Settings/buildApp.4DSettings
