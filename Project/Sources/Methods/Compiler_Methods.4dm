@@ -51,3 +51,9 @@ C_BOOLEAN:C305(Manifest_SetAuthor ;$2)
   //Manifest_SetURL
 C_TEXT:C284(Manifest_SetURL ;$1)
 C_BOOLEAN:C305(Manifest_SetURL ;$2)
+
+  //Folder_Get4DPluginsFolder
+C_TEXT:C284(Folder_Get4DPluginsFolder ;$0)
+
+  //Folder_Get4DComponentFolder
+C_TEXT:C284(Folder_Get4DComponentFolder ;$0)

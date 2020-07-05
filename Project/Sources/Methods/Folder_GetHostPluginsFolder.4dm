@@ -1,6 +1,7 @@
 //%attributes = {"invisible":true,"preemptive":"capable"}
 /* Folder_GetHostPluginsFolder () : componentFolderPath
    Returns the path to the host database's plugins folder.
+   An empty path is returned if the plugin folder doesn't exist.
 */
 C_TEXT:C284($0;$componentsFolderPath)
 ASSERT:C1129(Count parameters:C259=0)
@@ -14,5 +15,9 @@ $filePathParts:=Split string:C1554($resourcesFolderPath;Folder separator:K24:12;
 $filePathParts[$filePathParts.length-1]:="Plugins"
 
 $componentsFolderPath:=$filePathParts.join(Folder separator:K24:12)+Folder separator:K24:12
+
+If (Test path name:C476($componentsFolderPath)#Is a document:K24:1)
+	$componentsFolderPath:=""
+End if 
 
 $0:=$componentsFolderPath
