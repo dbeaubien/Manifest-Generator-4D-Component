@@ -17,5 +17,5 @@ Shared Method | Description
 
 Shared Method | Description
 ------------- | ------------
-**Manifest_GetComponentManifests** | Returns an object that contains a property for each component on the host database where the component's "componentManifest.json" file will be loaded as an object as the contents. If the componet doesn't have a "componentManifest.json" file then the value will be null..|
-**Manifest_GetPluginManifests** | Returns an object that contains a property for each plugins on the host database where the plugin's "manifest.json" file will be loaded as an object as the contents. If the plugin doesn't have a "manifest.json" file then the value will be null. |
+**Manifest_GetComponentManifests** | Returns an object that contains a property for each component on the host database and 4D where the component's "componentManifest.json" file will be loaded as an object as the contents. If the componet doesn't have a "componentManifest.json" file then the value will be null..|
+**Manifest_GetPluginManifests** | Returns an object that contains a property for each plugins on the host database and 4D where the plugin's "manifest.json" file will be loaded as an object as the contents. If the plugin doesn't have a "manifest.json" file then the value will be null. |
