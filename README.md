@@ -21,7 +21,7 @@ Shared Method | Description
 **Manifest_GetPluginManifests** | Returns an object that contains a property for each plugins on the host database and 4D where the plugin's "manifest.json" file will be loaded as an object as the contents. If the plugin doesn't have a "manifest.json" file then the value will be null. |
 
 Sample Code to put in the On Startup database method:
-```
+```4d
 If (Not(Is compiled mode))
 	ARRAY TEXT($at_components;0)
 	COMPONENT LIST($at_components)
@@ -35,7 +35,7 @@ If (Not(Is compiled mode))
 End if
 ```
 Sample code to put in the On Exit database method:
-```
+```4d
 // Keeps the list of shared methods accurate.
 If (Not(Is compiled mode))
 	ARRAY TEXT($at_components;0)
