@@ -1,16 +1,19 @@
 # No user preferences
-userPreferences.*/
-
-# No Trash
-project/Trash/*
+userPreferences.*
 
 # No derived data
-project/DerivedData/*
+Project/DerivedData
 
-# No data
-data/*
+# No data or indexes
+Data/*
+*.4dd
+*.4DIndx
+*.4DIndy
+*.Match
+*symbols.txt
 
 # No logs
-logs/*
+Logs
 
 Settings/buildApp.4DSettings
+*.dylib

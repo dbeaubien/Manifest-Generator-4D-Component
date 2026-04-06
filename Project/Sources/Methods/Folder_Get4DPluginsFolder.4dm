@@ -3,7 +3,7 @@
    Returns the path to the 4D's plugins folder.
    An empty path is returned if the plugin folder doesn't exist.
 */
-C_TEXT:C284($0;$pluginFolderPath)
+#DECLARE()->$pluginFolderPath : Text
 ASSERT:C1129(Count parameters:C259=0)
 
 If (Is macOS:C1572)
@@ -17,5 +17,3 @@ $pluginFolderPath:=$pluginFolderPath+"Plugins"+Folder separator:K24:12
 If (Test path name:C476($pluginFolderPath)#Is a folder:K24:2)
 	$pluginFolderPath:=""
 End if 
-
-$0:=$pluginFolderPath

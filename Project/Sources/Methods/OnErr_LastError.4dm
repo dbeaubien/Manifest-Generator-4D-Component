@@ -1,6 +1,7 @@
 //%attributes = {"invisible":true,"preemptive":"capable"}
 /* OnErr_LastError
 */
+#DECLARE() : Integer
 
-C_LONGINT:C283($0;gError)
-$0:=gError
+var gError : Integer
+return gError
