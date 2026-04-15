@@ -4,10 +4,10 @@
    and updates the method list.
 */
 
-C_OBJECT:C1216($manifestObj)
-$manifestObj:=File_LoadFromCurrentResource 
+var $manifestObj : Object
+$manifestObj:=File_LoadFromCurrentResource
 
-Refresh_MethodList ($manifestObj)
-Refresh_TransientAttributes ($manifestObj)
+Refresh_MethodList($manifestObj)
+Refresh_TransientAttributes($manifestObj)
 
-File_SaveToCurrentResource ($manifestObj)
+File_SaveToCurrentResource($manifestObj)

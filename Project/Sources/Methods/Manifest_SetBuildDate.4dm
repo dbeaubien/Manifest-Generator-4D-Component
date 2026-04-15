@@ -10,7 +10,7 @@
 ASSERT:C1129(Count parameters:C259>=1)
 ASSERT:C1129(Count parameters:C259<=2)
 
-C_OBJECT:C1216($manifestObj)
+var $manifestObj : Object
 $manifestObj:=File_LoadFromCurrentResource
 Refresh_TransientAttributes($manifestObj)
 

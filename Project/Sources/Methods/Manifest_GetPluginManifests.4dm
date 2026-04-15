@@ -28,9 +28,9 @@ var $pluginsFolderPath : Text
 $pluginManifests:=New object:C1471
 For each ($pluginsFolderPath; $folderPathCollection)
 	
-	C_LONGINT:C283($i)
-	C_TEXT:C284($json; $manifestFilePath; $friendlyPluginName)
-	C_OBJECT:C1216($jsonObj)
+	var $i : Integer
+	var $json; $manifestFilePath; $friendlyPluginName : Text
+	var $jsonObj : Object
 	ARRAY TEXT:C222($pluginsInFolder; 0)
 	FOLDER LIST:C473($pluginsFolderPath; $pluginsInFolder)
 	For ($i; 1; Size of array:C274($pluginsInFolder))

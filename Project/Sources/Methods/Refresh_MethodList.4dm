@@ -17,7 +17,7 @@ ARRAY OBJECT:C1221($methodAttributes; 0)
 METHOD GET PATHS:C1163(Path project method:K72:1; $methodPaths; *)
 METHOD GET ATTRIBUTES:C1334($methodPaths; $methodAttributes; *)
 
-C_LONGINT:C283($i)
+var $i : Integer
 For ($i; 1; Size of array:C274($methodPaths))
 	If ($methodAttributes{$i}.shared)
 		$manifestObj.methodList.push($methodPaths{$i})

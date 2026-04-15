@@ -15,7 +15,7 @@
 #DECLARE()->$componentManifests : Object
 ASSERT:C1129(Count parameters:C259=0)
 
-C_COLLECTION:C1488($folderPathCollection)
+var $folderPathCollection : Collection
 $folderPathCollection:=New collection:C1472
 If (Folder_Get4DComponentFolder#"")
 	$folderPathCollection.push(Folder_Get4DComponentFolder)
@@ -24,12 +24,12 @@ If (Folder_GetHostComponentFolder#"")
 	$folderPathCollection.push(Folder_GetHostComponentFolder)
 End if 
 
-C_TEXT:C284($componentsFolderPath)
+var $componentsFolderPath : Text
 $componentManifests:=New object:C1471
 For each ($componentsFolderPath; $folderPathCollection)
 	
-	C_TEXT:C284($json; $manifestFilePath; $friendlyComponentName)
-	C_LONGINT:C283($i)
+	var $json; $manifestFilePath; $friendlyComponentName : Text
+	var $i : Integer
 	ARRAY TEXT:C222($componentsInFolder; 0)
 	FOLDER LIST:C473($componentsFolderPath; $componentsInFolder)
 	For ($i; 1; Size of array:C274($componentsInFolder))

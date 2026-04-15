@@ -7,20 +7,20 @@
 ASSERT:C1129(Count parameters:C259=0)
 $longVersionStr:=""
 
-C_LONGINT:C283($vl_buildNo)
-C_TEXT:C284($versionString)
+var $vl_buildNo : Integer
+var $versionString : Text
 $versionString:=Application version:C493($vl_buildNo; *)
 
-C_TEXT:C284($versionKind)
+var $versionKind : Text
 $versionKind:=Substring:C12($versionString; 1; 1)
 
 // String off the front part
 $versionString:=Substring:C12($versionString; 5)+"00000000"  // make sure that the string is not blank
 
-C_TEXT:C284($major)
+var $major : Text
 $major:=$versionString[[1]]+$versionString[[2]]  //version number, e.g. 14
 
-C_TEXT:C284($minor; $release)
+var $minor; $release : Text
 If ($major="13")
 	$minor:=$versionString[[3]]  //.x
 	$release:="0"

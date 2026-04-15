@@ -3,5 +3,4 @@
 */
 #DECLARE() : Integer
 
-var gError : Integer
 return gError

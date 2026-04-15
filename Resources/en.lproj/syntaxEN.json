@@ -1,13 +1,25 @@
 {
 	"_method_": {
 		"Manifest_ShowAttributeEditor": {
-			"Syntax": "**Manifest_ShowAttributeEditor**()",
-			"Params": [],
+			"Syntax": "**Manifest_ShowAttributeEditor**() : Variant",
+			"Params": [
+				[
+					"",
+					"Variant",
+					"<-"
+				]
+			],
 			"Summary": ""
 		},
 		"Manifest_RefreshLocalFile": {
-			"Syntax": "**Manifest_RefreshLocalFile**()",
-			"Params": [],
+			"Syntax": "**Manifest_RefreshLocalFile**() : Variant",
+			"Params": [
+				[
+					"",
+					"Variant",
+					"<-"
+				]
+			],
 			"Summary": ""
 		},
 		"Manifest_SetCopyright": {
