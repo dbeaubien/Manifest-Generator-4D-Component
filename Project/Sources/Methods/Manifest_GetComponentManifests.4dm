@@ -38,6 +38,17 @@ For each ($componentsFolderPath; $folderPathCollection)
 			+$componentsInFolder{$i}+Folder separator:K24:12\
 			+"Resources"+Folder separator:K24:12\
 			+"componentManifest.json"
+		If (Not:C34(Test path name:C476($manifestFilePath)=Is a document:K24:1))  // accomodate the new way of building components
+			$manifestFilePath:=$componentsFolderPath\
+				+$componentsInFolder{$i}+Folder separator:K24:12\
+				+"Contents"+Folder separator:K24:12\
+				+"Resources"+Folder separator:K24:12\
+				+"componentManifest.json"
+		End if 
+		If (Test path name:C476($manifestFilePath)=Is a document:K24:1)
+			$json:=Document to text:C1236($manifestFilePath; "utf-8"; Document unchanged:K24:18)
+		End if 
+		
 		
 		$friendlyComponentName:=$componentsInFolder{$i}
 		If ($friendlyComponentName="@.4dbase")
@@ -45,9 +56,6 @@ For each ($componentsFolderPath; $folderPathCollection)
 		End if 
 		$friendlyComponentName:=Replace string:C233($friendlyComponentName; "."; "_")
 		
-		If (Test path name:C476($manifestFilePath)=Is a document:K24:1)
-			$json:=Document to text:C1236($manifestFilePath; "utf-8"; Document unchanged:K24:18)
-		End if 
 		
 		If ($json="{@}")
 			OnErr_ClearError
